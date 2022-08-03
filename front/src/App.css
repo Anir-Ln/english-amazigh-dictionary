@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap');
+
+
+:root {
+  --btn-width: 6rem;
+  --darkest: #222831;
+  --dark: #393E46;
+  --light: #EEEEEE;
+  --yellow: #FFD369;
+}
+
+.App {
+  text-align: center;
+  overflow-x: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lexend', sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+p, input::placeholder {
+  font-size: 1rem;
+}
+
+
+body {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.header {
+  background-color: var(--darkest);
+  padding: 1rem ;
+}
+
+.header-title {
+  margin-bottom: 0.75rem;
+  color: var(--yellow);
+}
+
+.search-form {
+  margin-top: 2rem;
+  position: relative;
+  /* width: 40rem; */
+  width: 60%;
+  max-width: 40rem;
+}
+
+main {
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  flex-direction: column;
+  width: 100vw;
+}
+
+.input-search {
+  width: 100%;
+  background: #EEEEEE;
+  padding: 0 var(--btn-width) 0 1rem;
+  border-radius: .3rem;
+  transition: all .3s cubic-bezier(0, 0, 0.43, 1.49);
+  transition-property: width, border-radius;
+  outline: none;
+  position: relative;
+}
+
+
+input, button {
+  height: 3rem;
+  border: none;
+  color: #393E46;
+  font-size: 1.25rem;
+}
+
+
+button {
+  /* display: none; */
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: var(--btn-width);
+  background-color: #FFD369;
+  border-radius: 0 0.3rem 0.3rem 0;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #efc460;
+}
+
+/* @media screen and (max-width: 700px) {
+  .search-form {
+    width: 30rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .search-form {
+    width: 100%;
+  }
+} */
+
+
+.cards-container {
+  width: 60%;
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 2rem; */
+  margin-bottom: 2rem;
+}
+
+.word-card {
+  background-color: var(--darkest);
+  opacity: .9;
+  /* margin-bottom: 1rem; */
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--dark);
+}
+
+.word-card:hover {
+  background-color: var(--darkest);
+  opacity: 1;
+  cursor: pointer;
+}
+
+.en-word {
+  color: var(--yellow);
+  margin-bottom: 0.4rem;
+}
+
+footer {
+  margin-top: auto;
+  padding: 1rem;
+  background-color: var(--darkest);
+  width: 100%;
+}
+
+footer span {
+  color: var(--yellow);
+}
+  
+.text-link {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.word-page {
+  align-self: center;
+  text-align: left;
+  width: 60%;
+  max-width: 40rem;
+  margin-bottom: 4rem;
+}
+
+.word-page .en-word-page {
+  color: var(--yellow);
+  margin-bottom: 0.4rem;
+}
+
+.word-page .am-definition-page {
+  line-height: 1.5rem;
+}
+
