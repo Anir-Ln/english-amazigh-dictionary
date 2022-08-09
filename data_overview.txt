@@ -1,0 +1,50 @@
+<w>a
+<t>(art.)
+<s>mas.
+<i>yan
+<x>ẓeṛiɣ yan urgaz
+<s>fem.
+<i>yat
+<x>yat tefruxt ad nn-unniɣ
+<w>abandon
+<t>(v.)
+<i>fel
+<x>ifel tarwa nnes
+<i>ajj
+<x>yujja tarwa nnes ur ar g-isen isaqqsa
+<i>ttu
+<x>ittu tarwa nnes inɣubu
+<i>nɣubu
+<x>inɣuba f tarwa nnes
+<i>zug
+<x>izug f tarwa nnes mecnekk ay-ad!
+<i>ɣber
+<x>iɣber f tarwa nnes
+<i>ṛẓem i ssuqq
+<x>iṛẓem i ssuqq n tarwa nnes mecnekk ay-ad
+<i>sllem ɣ
+<x>isllem ɣ tarwa nnes, iliḥ t
+<i>ur tt yiwi
+<x>ur tt akkʷ yiwi ɣ tarwa nnes, izug ka!
+<i>ssired ifassen
+<x>issired ifassen ɣ tarwa nnes, iddu izug
+<i>all ifassen
+<x>yull ifassen f tarwa nnes inɣubu
+<w>abbreviation
+<t>(n.)
+<i>assigzul/azzigzul, issigzulen/izzigzulen
+<x>assizgzul n teguriwin
+<i>assigzil/azzigzil, issigzilen/izzigzilen
+<x>assigzil n iwaliwen
+<i>azgzil, izgizilen
+<x>azgzil n iwaliwen
+<i>assimẓiy/azzimẓiy, issimẓiyen/izzimẓiyen
+<x>assimẓiy n teguriwin ur bahra icqqa!
+<i>assizbub, issizbuben
+<x>assizbub n teguriwin ur bahra irxa
+<i>ulum, ulumen
+<x>ulum n teguriwin ur bahra icqqa
+<i>asgʷýḍiḍ, isgʷýḍiḍen
+<x>asgʷýḍiḍ n tuguriwin ur bahra icqqa
+<i>akray, ikrayen
+<x>akray n warra rad ig bezziz!
