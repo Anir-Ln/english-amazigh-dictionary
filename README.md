@@ -1,7 +1,7 @@
 #### currently i am designing the database, i am thinking of something like this
 
 ## what i need to be able to do:
-+ get all or some english words with everything defintions_by_type, definitons .... examples
++ get all or some english words LIKE WORD(definitions) and every definition contains a list of am_words and every am_words with many examples
 + be able to get the correspondant english words to an amazigh word
 
 
