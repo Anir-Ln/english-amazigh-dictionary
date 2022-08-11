@@ -14,14 +14,15 @@ from .models import (
 from .serializers import (
     EnWordsDeepSerializer,
     AmWordsShallowSerializer,
+    EnWordsSerializer,
+    AmWordsSerializer
 )
 # Create your views here.
 
 
 @api_view(['GET'])
 def get_en_word_by_pk(request, pk):
-    en_word = EnWords.objects.get(id=pk)
-    # definitions = Definitions.objects.filter(id_en_word=en_words)
+    en_word = get_object_or_404(EnWords, id=pk)
     serializer = EnWordsDeepSerializer(en_word, many=False)
     return Response(serializer.data)
 
@@ -30,8 +31,19 @@ def get_am_word_by_pk(request, pk):
     am_word = get_object_or_404(AmWords, id=pk)
     serializer = AmWordsShallowSerializer(am_word, many=False)
     return Response(serializer.data)
-     
 
+
+@api_view(['GET'])
+def get_en_words(request, en):
+    en_words = EnWords.objects.filter(en_word__startswith=en)[:11]
+    serializer = EnWordsSerializer(en_words, many=True)
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def get_am_words(request, am):
+    am_words = AmWords.objects.filter(am_word__startswith=am)[:11]
+    serializer = AmWordsSerializer(am_words, many=True)
+    return Response(serializer.data)
 
 # @api_view(['GET'])
 # def get_random_words(request):

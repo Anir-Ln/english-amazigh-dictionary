@@ -1,3 +1,4 @@
+from pyexpat import model
 from rest_framework.serializers import ModelSerializer, SerializerMethodField
 from . import models
 
@@ -87,3 +88,10 @@ class AmWordsShallowSerializer(ModelSerializer):
     
     def get_examples(self, instance):
         return ExamplesSerializer(models.Examples.objects.filter(id_am_word=instance), many=True).data
+
+
+class AmWordsSerializer(ModelSerializer):
+    en_word = EnWordsSerializer(source='id_en_word')
+    class Meta:
+        model = models.AmWords
+        fields= ('id', 'am_word', 'en_word')
