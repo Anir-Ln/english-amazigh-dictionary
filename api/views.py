@@ -6,10 +6,6 @@ from rest_framework.response import Response
 from .models import (
     EnWords,
     AmWords,
-    Definitions,
-    Examples,
-    SubTypes,
-    WordTypes
 )
 from .serializers import (
     EnWordsDeepSerializer,

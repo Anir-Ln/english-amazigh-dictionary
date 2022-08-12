@@ -7,9 +7,10 @@ import SearchBox from './components/SearchBox';
 import WordCards from './components/WordCards';
 import Footer from './components/Footer';
 import WordPage from './pages/WordPage';
+import Home from './pages/Home'
 
 function App() {
-  const [homeWords, setHomeWords] = useState([])
+  // const [homeWords, setHomeWords] = useState([])
   const [searchInput, setSearchInput] = useState('')
   const [words, setWords] = useState([])
   
@@ -38,23 +39,24 @@ function App() {
     getWords()
   }
 
-  useEffect(() => {
-    const getHomeWords = async () => {
-      const res = await fetch(`/api/words/`)
-      const data = await res.json()
-      setHomeWords(data)
-    }
-    getHomeWords()
-  }, [])
+  // useEffect(() => {
+  //   const getHomeWords = async () => {
+  //     const res = await fetch(`/api/words/`)
+  //     const data = await res.json()
+  //     setHomeWords(data)
+  //   }
+  //   getHomeWords()
+  // }, [])
 
 
   const getWords = async () => {
-    let res = await fetch(`/api/words/${searchInput}`)
+    let res = await fetch(`/api/en_words/${searchInput}`)
     let data = await res.json()
     if (data.length === 0)
-      data.push({en: "", am:"we couldn't find this word in our dictionary"})
+      data.push({en_word: "", am_word:"we couldn't find this word in our dictionary"})
     setWords(data)
-    console.log('getWords')
+    // console.log('getWords')
+    // console.log(data);
   }
 
   const handleWordClick = () => {
@@ -73,7 +75,8 @@ function App() {
         </main>
 
         <Routes>
-          <Route path='/:en' element={<WordPage />}/>
+          <Route path='/' exact element={<Home />}/>
+          <Route path='/:id_en_word' element={<WordPage />}/>
         </Routes>
 
         <Footer />

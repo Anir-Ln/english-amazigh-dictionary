@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom'
 
 const WordCard = ({word, handleWordClick}) => {
     return (
-        <Link to={`/${word.en}`} className='text-link' onClick={handleWordClick}>
+        <Link to={`/${word.id}`} className='text-link' onClick={handleWordClick}>
             <div className='word-card'>
-                <h3 className='en-word'>{word.en}</h3>
+                <h3 className='en-word'>{word.en_word}</h3>
                 <p className='am-definition'>
-                    {`${word.am.substring(0, 50)} ...`}
+                    {/* {`${word.am.substring(0, 50)} ...`} */}
                 </p>
             </div>
         </Link>
