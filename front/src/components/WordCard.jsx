@@ -2,13 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 
-const WordCard = ({word, handleWordClick}) => {
+const WordCard = ({tr_path, word:{id, word, def}, handleWordClick}) => {
     return (
-        <Link to={`/en_am/${word.id}`} className='text-link' onClick={handleWordClick}>
+        <Link to={`/${tr_path}/${id}`} className='text-link' onClick={handleWordClick}>
             <div className='word-card'>
-                <h3 className='en-word'>{word.en_word}</h3>
+                <h3 className='en-word'>{word}</h3>
                 <p className='am-definition'>
-                    {/* {`${word.am.substring(0, 50)} ...`} */}
+                    {def ?? ""}
                 </p>
             </div>
         </Link>

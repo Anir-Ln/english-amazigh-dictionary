@@ -1,12 +1,12 @@
 import React from 'react'
 import WordCard from './WordCard'
 
-const WordCards = ({words, handleWordClick}) => {
+const WordCards = ({words, handleWordClick, tr_path}) => {
     return (
         <div className='cards-container'>
             {
                 words.map((word, index) => {
-                    return <WordCard key={index} word={word} handleWordClick={handleWordClick}/>
+                    return <WordCard key={index} tr_path={tr_path} word={word} handleWordClick={handleWordClick}/>
                 })
             }
             {/* {

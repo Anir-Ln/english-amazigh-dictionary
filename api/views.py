@@ -25,20 +25,20 @@ def get_en_word_by_pk(request, pk):
 @api_view(['GET'])
 def get_am_word_by_pk(request, pk):
     am_word = get_object_or_404(AmWords, id=pk)
-    am_words = AmWords.objects.filter(am_word=am_word.am_word)
+    am_words = AmWords.objects.filter(am_word__startswith=am_word.am_word.lower())
     serializer = AmWordsShallowSerializer(am_words, many=True)
     return Response(serializer.data)
 
 
 @api_view(['GET'])
 def get_en_words(request, en):
-    en_words = EnWords.objects.filter(en_word__startswith=en)[:11]
+    en_words = EnWords.objects.filter(en_word__startswith=en.lower())[:11]
     serializer = EnWordsSerializer(en_words, many=True)
     return Response(serializer.data)
 
 @api_view(['GET'])
 def get_am_words(request, am):
-    am_words = AmWords.objects.filter(am_word__startswith=am)[:11]
+    am_words = AmWords.objects.filter(am_word__startswith=am.lower())[:11]
     serializer = AmWordsSerializer(am_words, many=True)
     return Response(serializer.data)
 

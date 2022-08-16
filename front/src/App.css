@@ -181,9 +181,13 @@ footer span {
   transition: all 0.5s ease;
 }
 
+.en-word-page {
+  font-size: 2.5rem;
+}
+
 .word-page .en-word-page {
   color: var(--yellow);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .word-page .am-definition-page {
@@ -224,4 +228,50 @@ footer span {
   font-size: 1rem;
   margin-bottom: 0.3rem;
   color: var(--light);
+}
+
+.blocks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem auto;
+}
+
+.block {
+  height: 379px;
+  width: 300px;
+  border-radius: 10px;
+  transition: background 0.8s;
+  overflow: hidden;
+  background: black;
+  box-shadow: 0 70px 63px -60px #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: blur(0.5);
+}
+
+
+
+.block:hover {
+  transition: all ease-in .3s;
+}
+
+.block1:hover {
+  background-size: 550px;
+}
+.block2:hover {
+  background-size: 650px;
+}
+
+.block1 {
+  background: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), 
+  rgba(115, 156, 229, 0.73)),url("./assets/img/am_en.jpeg") center center no-repeat;
+  background-size: 500px;
+}
+.block2 {
+  background: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), 
+  rgba(219, 134, 101, 0.73)),url("./assets/img/en_am.jpeg") center center no-repeat;
+  background-size: 600px;
 }
