@@ -25,7 +25,8 @@ def get_en_word_by_pk(request, pk):
 @api_view(['GET'])
 def get_am_word_by_pk(request, pk):
     am_word = get_object_or_404(AmWords, id=pk)
-    serializer = AmWordsShallowSerializer(am_word, many=False)
+    am_words = AmWords.objects.filter(am_word=am_word.am_word)
+    serializer = AmWordsShallowSerializer(am_words, many=True)
     return Response(serializer.data)
 
 

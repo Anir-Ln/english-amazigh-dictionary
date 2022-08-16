@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 import Definition from '../components/wordPageComponents/Definition'
 
 
-const WordPage = () => {
+const EnWordPage = () => {
     const {id_en_word} = useParams()
     const [word, setWord] = useState({})
 
@@ -42,4 +42,4 @@ const WordPage = () => {
     )
 }
 
-export default WordPage
+export default EnWordPage

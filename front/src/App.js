@@ -6,14 +6,16 @@ import Header from './components/Header';
 import SearchBox from './components/SearchBox';
 import WordCards from './components/WordCards';
 import Footer from './components/Footer';
-import WordPage from './pages/WordPage';
+import EnWordPage from './pages/EnWordPage';
+import AmWordPage from './pages/AmWordPage';
 import Home from './pages/Home'
 
 function App() {
   // const [homeWords, setHomeWords] = useState([])
   const [searchInput, setSearchInput] = useState('')
   const [words, setWords] = useState([])
-  
+
+
   // when searchInput changes
   // useEffect(() => {
   //   console.log(searchInput)
@@ -76,7 +78,8 @@ function App() {
 
         <Routes>
           <Route path='/' exact element={<Home />}/>
-          <Route path='/:id_en_word' element={<WordPage />}/>
+          <Route path='/en_am/:id_en_word' element={<EnWordPage />}/>
+          <Route path='/am_en/:id_am_word' element={<AmWordPage />}/>
         </Routes>
 
         <Footer />
