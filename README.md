@@ -1,4 +1,4 @@
-
+## this is only a preview of the app, the production app is not developed in django + react. ==> only this version of the app is open source
 ## what i need to be able to do:
 + get all or some english words LIKE WORD(definitions) and every definition contains a list of am_words and every am_words with many examples
 + be able to get the correspondant english words to an amazigh word
